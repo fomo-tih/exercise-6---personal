@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Exercise 6 — Interactive Histogram</title>
+
+  <!-- Reuse your site-wide styles + add Ex6-specific CSS -->
+  <link rel="stylesheet" href="style.css" />
+  <meta name="color-scheme" content="dark" />
+</head>
+<body>
+
+  <!-- Your existing nav -->
+  <nav class="nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Power_Logo-removebg-preview.png" alt="Logo" />
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="AboutUs.html" class="nav-item">About Us</a>
+      <a href="Televisions.html" class="nav-item">Televisions</a>
+      <a href="Exercise5.html" class="nav-item is-active">Exercise 5</a>
+      <a href="Exercise6.html" class="nav-item">Exercise 6</a>
+      <a href="Exercise6_2.html" class="nav-item">Exercise 6.2</a>
+    </div>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <h1 class="charts-header">Exercise 6 — Interactive Histogram</h1>
+    <p class="sub" style="text-align:center;margin-bottom:16px;">
+      Energy consumption distribution for different screen technologies. Use the buttons to filter.
+    </p>
+
+    <!-- Filter buttons will be injected here -->
+    <div id="filters_screen" class="filters"></div>
+
+    <!-- Chart goes here -->
+    <div id="histogram" class="responsive-svg-container"></div>
+
+    <section class="body">
+      <h3>Notes</h3>
+      <ul>
+        <li>Histogram built with <code>d3.bin()</code> over <em>energyConsumption</em>.</li>
+        <li>Filters: <strong>All / LED / LCD / OLED</strong> (animated updates).</li>
+        <li>CSV path: <code>./data/Ex6_TVdata.csv</code></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>2025 - fomo.tih | GenAI Acknowledgement</footer>
+
+  <!-- Scripts -->
+  <script src="navScript.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Ex6 modules -->
+  <script src="Exercise6.1_js/shared-constants.js"></script>
+  <script src="Exercise6.1_js/load-data.js"></script>
+  <script src="Exercise6.1_js/histogram.js"></script>
+  <script src="Exercise6.1_js/interactions.js"></script>
+</body>
+</html>
+

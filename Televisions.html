@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Televisions | Power Website</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION BAR ===================== -->
+  <nav class="nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Power_Logo-removebg-preview.png" alt="Power Website Logo"/>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="AboutUs.html" class="nav-item">About Us</a>
+      <a href="Televisions.html" class="nav-item">Televisions</a>
+      <a href="Exercise5.html" class="nav-item is-active">Exercise 5</a>
+      <a href="Exercise6.html" class="nav-item">Exercise 6</a>
+      <a href="Exercise6_2.html" class="nav-item">Exercise 6.2</a>
+    </div>
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-content">
+
+    <section class="televisions">
+      <h1>Television Energy Consumption in Australia</h1>
+
+      <!-- ===================== TV CARDS (images) ===================== -->
+      <section class="card-grid">
+        <!-- Knime Workflow -->
+        <div class="card">
+          <img src="images/knime workflow.png" alt="Knime Workflow"/>
+          <div class="card-content">
+            <h3>Knime Workflow</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 1 -->
+        <div class="card">
+          <img src="images/Question 1.png" alt="TV Question 1"/>
+          <div class="card-content">
+            <h3>Question 1</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="card">
+          <img src="images/Question 2.png" alt="TV Question 2"/>
+          <div class="card-content">
+            <h3>Question 2</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div class="card">
+          <img src="images/Question 3.png" alt="TV Question 3"/>
+          <div class="card-content">
+            <h3>Question 3</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 4 -->
+        <div class="card">
+          <img src="images/Question 4.png" alt="TV Question 4"/>
+          <div class="card-content">
+            <h3>Question 4</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="card">
+          <img src="images/Question 5.png" alt="TV Question 5"/>
+          <div class="card-content">
+            <h3>Question 5</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div class="card">
+          <img src="images/Question 6.png" alt="TV Question 6"/>
+          <div class="card-content">
+            <h3>Question 6</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+
+        <!-- Question 7 -->
+        <div class="card">
+          <img src="images/Question 7.png" alt="TV Question 7"/>
+          <div class="card-content">
+            <h3>Question 7</h3>
+            <button>More Details</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== CHARTS SECTION ===================== -->
+    <section class="charts-section">
+      <h2 class="charts-header">Data Visualizations</h2>
+    </section>
+
+    <div class="charts-grid">
+      <div class="chart-box"><canvas id="chartQ1Pie"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ1Bar"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ2Line"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ3Pie"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ4Bar"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ5Scatter"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ6Scatter"></canvas></div>
+      <div class="chart-box"><canvas id="chartQ7Bar"></canvas></div>
+    </div>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    2025 - fomo.tih | GenAI Acknowledgement
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="navScript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Unified styling for all charts
+    const baseOptions = (title, xLabel = "", yLabel = "", hasScales = true) => ({
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: { display: true, text: title, color: "#FBE79C", font: { size: 14 } },
+        legend: { labels: { color: "#f5f5f7" } }
+      },
+      scales: hasScales ? {
+        x: { ticks: { color: "#f5f5f7" }, title: { display: !!xLabel, text: xLabel, color: "#FBE79C" } },
+        y: { ticks: { color: "#f5f5f7" }, title: { display: !!yLabel, text: yLabel, color: "#FBE79C" } }
+      } : {}
+    });
+
+/* ===== Q1 Pie ===== */
+new Chart(document.getElementById("chartQ1Pie"), {
+  type: "pie",
+  data: {
+    labels: ["LCD", "LED", "OLED"],
+    datasets: [{
+      data: [356, 3492, 271],
+      // multicolor palette
+      backgroundColor: ["#4e79a7", "#f28e2b", "#e15759"]
+    }]
+  },
+  options: baseOptions("Q1 - Distribution of Screen Technologies", "", "", false)
+});
+   /* ===== Q1 Bar ===== */
+new Chart(document.getElementById("chartQ1Bar"), {
+  type: "bar",
+  data: {
+    labels: ["LCD", "LED", "OLED"],
+    datasets: [{
+      label: "Count (Submit_ID)",
+      data: [356, 3492, 271],
+      backgroundColor: ["#4e79a7", "#f28e2b", "#e15759"] // multicolor
+    }]
+  },
+  options: baseOptions("Q1 - Screen Technologies", "Screen Tech", "Count (Submit_ID)")
+});
+
+
+  /* ===== Q2 Line ===== (multicolor points, new line color) */
+const q2Data = [
+  3, 1, 19, 2, 11, 3, 161, 4, 3, 64, 189, 3, 6, 46, 81, 24,
+  134, 223, 1, 32, 263, 117, 6, 659, 15, 27, 20, 139, 620,
+  1, 3, 7, 80, 10, 532, 1, 63, 1, 1, 5, 33, 296, 75, 5, 22,
+  52, 48, 5, 3
+];
+// palette and per-point colors
+const q2Palette = ["#4e79a7","#f28e2b","#e15759","#76b7b2","#59a14f","#af7aa1","#ff9da7","#9c755f","#bab0ab","#86bc86"];
+const q2PointColors = Array.from({ length: q2Data.length }, (_, i) => q2Palette[i % q2Palette.length]);
+new Chart(document.getElementById("chartQ2Line"), {
+  type: "line",
+  data: {
+    labels: Array.from({ length: q2Data.length }, (_, i) => `P${i + 1}`),
+    datasets: [{
+      label: "Count",
+      data: q2Data,
+      borderColor: "#4e79a7",                 // line color (blue)
+      pointBackgroundColor: q2PointColors,    // multicolor points
+      pointBorderColor: q2PointColors,
+      fill: false,
+      tension: 0.3
+    }]
+  },
+  options: baseOptions("Q2 - Availability of Screen Sizes by Frequency", "ScreenInch", "Count")
+});
+
+   /* ===== Q3 Pie ===== */
+new Chart(document.getElementById("chartQ3Pie"), {
+  type: "pie",
+  data: {
+    labels: ["Samsung", "Kogan", "LG", "Hisense", "Philips", "Others"],
+    datasets: [{
+      data: [1118, 689, 676, 264, 130, 1242],
+      // multicolor palette (no more yellows)
+      backgroundColor: ["#4e79a7", "#f28e2b", "#e15759", "#76b7b2", "#59a14f", "#af7aa1"]
+    }]
+  },
+  options: baseOptions("Q3 - Distribution of TV Models by Brand", "", "", false)
+});
+
+  /* ===== Q4 Bar ===== */
+new Chart(document.getElementById("chartQ4Bar"), {
+  type: "bar",
+  data: {
+    labels: ["LCD", "LED", "OLED"],
+    datasets: [{
+      label: "Energy Consumption",
+      data: [309.44, 468.87, 510.84],
+      backgroundColor: ["#4e79a7", "#f28e2b", "#e15759"] // multicolor
+    }]
+  },
+  options: baseOptions("Q4 - Average Energy Consumption by TV Screen", "Screen Tech", "Energy Consumption")
+});
+
+/* ===== Q5 Scatter ===== */
+const screenInch = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120];
+const energy_bestEfficiency = [null, 99, 149, 177, 267.5, 450.5, 480, 550, 640, 720, 810, 900];
+const energy_avg = [null, 120, 180, 220, 300, 470, 500, 580, 670, 740, 830, 910];
+const scatterBest = screenInch.map((inch, i) => ({ x: inch, y: energy_bestEfficiency[i] }));
+const lineAvg = screenInch.map((inch, i) => ({ x: inch, y: energy_avg[i] }));
+// multi-color for the points
+const q5PointColors = [
+  "#4e79a7", "#f28e2b", "#e15759", "#76b7b2", "#59a14f",
+  "#af7aa1", "#ff9da7", "#9c755f", "#bab0ab", "#86bc86",
+  "#8cd3ff", "#ffc857"
+];
+new Chart(document.getElementById("chartQ5Scatter"), {
+  type: "scatter",
+  data: {
+    datasets: [
+      { label: "Best Efficiency (Lowest Energy per Inch)", data: scatterBest, backgroundColor: q5PointColors, pointRadius: 3, showLine: false },
+      { label: "Average Energy (per 10-inch bin)", data: lineAvg, type: "line", fill: false, pointRadius: 0, borderColor: "#bab0ab", borderWidth: 1 }
+    ]
+  },
+  options: baseOptions("Q5 - Relationship between Screen Size and Energy Consumption", "Screen Inch", "Energy Consumption")
+});
+
+   /* ===== Q6 Scatter (multi-color points) ===== */
+const starRatingIndex = [1.009683, 1.026438, 1.037274, 1.069303, 1.092845];
+const meanScreenSize  = [163.897, 138.798, 163.829, 163.897, 138.783];
+
+const scatterDataQ6 = starRatingIndex.map((x, i) => ({
+  x,
+  y: meanScreenSize[i]
+}));
+
+// Distinct colors for the 5 points
+const q6Colors = ["#4e79a7", "#f28e2b", "#e15759", "#76b7b2", "#59a14f"];
+
+new Chart(document.getElementById("chartQ6Scatter"), {
+  type: "scatter",
+  data: {
+    datasets: [{
+      label: "Star Rating vs Mean Screen Size",
+      data: scatterDataQ6,
+      backgroundColor: q6Colors,
+      borderColor: q6Colors,
+      pointRadius: 3,
+      pointHoverRadius: 7
+    }]
+  },
+  options: baseOptions("Q6 - Star Rating vs Screen Size", "Star Rating Index", "Mean Screen Size")
+});
+
+/* ===== Q7 Bar (Top 12, Horizontal, consistent title & readable labels) ===== */
+(function () {
+  // Optional fallback if baseOptions isn't defined on your page
+  if (typeof baseOptions === "undefined") {
+    window.baseOptions = (title, xLabel = "", yLabel = "") => ({
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        title: { display: true, text: title, color: "#e6e6e6", font: { size: 16, weight: 700 } },
+        legend: { labels: { color: "#e6e6e6" } }
+      },
+      scales: {
+        x: { ticks: { color: "#e6e6e6" }, title: { display: !!xLabel, text: xLabel, color: "#cfcfcf" } },
+        y: { ticks: { color: "#e6e6e6" }, title: { display: !!yLabel, text: yLabel, color: "#cfcfcf" } }
+      }
+    });
+  }
+  // Raw arrays from your dataset
+  const q7LabelsRaw = [
+    "AIWA","BAUHN","YOKOHAMA","TEAC","LOEWE","SONIQ","JVC","DGTEC","LINSAR","QBELL","SMTV",
+    "ELITELUX","VEON","SHARP","CHIQ","SIGNIFY","SHENZHEN XINCHAODA TECHNOLOGY CO., LTD",
+    "S VISION","EKO","BLAUPUNKT","KOGAN","METZ","PHILIPS","HYUNDAI","TOSHIBA","PALSONIC",
+    "DEVANTI","SKYWORTH","PRISM+","TAVICE","HITACHI","LG","HISENSE","SAMSUNG","SONY","TCL","EMETE"
+  ];
+  const q7DataRaw = [
+    257,272.506,298.667,300.375,318.643,320,320.283,325,328,328.875,336.4,343,356.4,358.9,367.372,
+    378,378.5,379,383.825,401.414,404.453,428,428.108,435.714,436.54,439,443,450.818,451.625,477,
+    485,495.783,539.928,567.438,586.619,606.323,679.4
+  ];
+  // Sort by value (desc) and keep Top 12
+  const pairs = q7LabelsRaw.map((l, i) => ({ label: l, value: q7DataRaw[i] }))
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 12);
+  // If you prefer the largest at the bottom, uncomment:
+  // pairs.reverse();
+  const q7Labels = pairs.map(p => p.label);
+  const q7Data   = pairs.map(p => p.value);
+  // Color palette (multi-color bars)
+  const palette10 = ["#4e79a7","#f28e2b","#e15759","#76b7b2","#59a14f","#af7aa1","#ff9da7","#9c755f","#bab0ab","#86bc86"];
+  // Shorten long y-axis labels visually, keep full text in tooltips
+  const tickShortener = (s) => (typeof s === "string" && s.length > 18 ? s.slice(0, 18) + "…" : s);
+  // Base options to keep title style consistent with other charts
+  const q7Base = baseOptions(
+    "Q7 - Top 12 Mean Energy Consumption by Brand",
+    "Mean Energy Consumption (kWh)",
+    "Brand"
+  );
+  new Chart(document.getElementById("chartQ7Bar"), {
+    type: "bar",
+    data: {
+      labels: q7Labels,
+      datasets: [{
+        label: "Mean(energyConsumption)",
+        data: q7Data,
+        backgroundColor: q7Labels.map((_, i) => palette10[i % palette10.length]),
+        borderWidth: 0,
+        categoryPercentage: 0.9,
+        barPercentage: 0.9
+      }]
+    },
+    options: {
+      // Merge with base to preserve the title/legend look
+      ...q7Base,
+      indexAxis: "y",                 // horizontal bars
+      maintainAspectRatio: false,
+      plugins: {
+        ...q7Base.plugins,
+        legend: { ...q7Base.plugins.legend, display: true },
+        tooltip: {
+          callbacks: {
+            title: (items) => q7Labels[items[0].dataIndex], // full brand in tooltip
+            label: (ctx) => `${ctx.dataset.label}: ${ctx.parsed.x}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          ...q7Base.scales.x,
+          beginAtZero: true,
+          suggestedMax: Math.ceil(Math.max(...q7Data) / 50) * 50
+        },
+        y: {
+          ...q7Base.scales.y,
+          // Map tick index -> label, then shorten for readability
+          ticks: {
+            callback: (val, idx) => tickShortener(q7Labels[idx] ?? ""),
+            autoSkip: false,
+            font: { size: 8 },
+            color: "#fff",
+          }
+        }
+      }
+    }
+  });
+})();
+  });
+  
+  </script>
+</body>
+</html>

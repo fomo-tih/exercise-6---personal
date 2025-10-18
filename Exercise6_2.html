@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Exercise 6.2 | Power Website</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="exercise6-2">
+
+  <!-- ===================== NAVIGATION BAR ===================== -->
+  <nav class="nav">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Power_Logo-removebg-preview.png" alt="Power Website Logo"/>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="AboutUs.html" class="nav-item">About Us</a>
+      <a href="Televisions.html" class="nav-item">Televisions</a>
+      <a href="Exercise5.html" class="nav-item is-active">Exercise 5</a>
+      <a href="Exercise6.html" class="nav-item">Exercise 6</a>
+      <a href="Exercise6_2.html" class="nav-item">Exercise 6.2</a>
+    </div>
+    </div>
+  </nav>
+
+  <!-- ===================== MAIN CONTENT ===================== -->
+  <main class="page-content">
+    <section class="charts-section">
+      <h1 class="charts-header">Exercise 6.2 – Star Rating vs Screen Size</h1>
+      <p style="text-align:center;max-width:700px;margin:0 auto 30px;">
+        This scatterplot uses D3.js to explore the relationship between <strong>Star Rating</strong> and 
+        <strong>Screen Size</strong> for different <strong>Screen Technologies</strong> in the TV dataset.
+      </p>
+
+      <div id="scatterplot-container" class="chart-box"></div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    2025 – fomo.tih | GenAI Acknowledgement
+  </footer>
+
+<script src="navScript.js"></script>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+
+<!-- match your folder + filenames exactly -->
+<script src="Exercise6.2_js/shared-constants-6_2.js"></script>
+<script src="Exercise6.2_js/scatterplot.js"></script>
+<script src="Exercise6.2_js/interactions-6_2.js"></script>
+<script src="Exercise6.2_js/load-data_6-2.js"></script> <!-- LAST -->
+
+
+</body>
+</html>

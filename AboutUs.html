@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8"> 
+  <!-- Mobile-friendly scaling -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <!-- Page title -->
+  <title>About Us | Power Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-page"> 
+
+
+  <!-- ===================== NAVIGATION BAR ===================== -->
+  <nav class="nav">
+    <!-- Logo on the left, links back to Home -->
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/Power_Logo-removebg-preview.png" alt="Logo">
+      </a>
+    </div>
+
+    <!-- Navigation links -->
+    <div class="nav-links">
+      <a href="index.html" class="nav-item">Home</a>
+      <a href="AboutUs.html" class="nav-item">About Us</a>
+      <a href="Televisions.html" class="nav-item">Televisions</a>
+      <a href="Exercise5.html" class="nav-item is-active">Exercise 5</a>
+      <a href="Exercise6.html" class="nav-item">Exercise 6</a>
+      <a href="Exercise6_2.html" class="nav-item">Exercise 6.2</a>
+    </div>
+    </div>
+  </nav>
+
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="about-container">
+    <!-- Left column: text info -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <h1>Hi, I’m <span>Harnihal</span></h1>
+
+      <!-- Animated typing effect container -->
+      <div class="tagline">
+        <div class="typing-container">
+          <div class="typing-text">fomo.tih</div>
+        </div>
+      </div>
+
+      <!-- Personal description -->
+      <p class="description">
+        I’m currently studying Computer Science with a focus on Cybersecurity at INTI.
+        I am also a full-time day trader and part of <strong>FOMO</strong>, exploring financial markets and strategies.
+      </p>
+
+      <!-- Motivational quote -->
+      <blockquote>"Blending technology and trading for a smarter future."</blockquote>
+
+      <!-- Action buttons (resume download & projects page) -->
+      <div class="about-buttons">
+        <a href="images/resume.pdf" download class="btn primary">Download CV</a>
+        <a href="Projects.html" class="btn secondary">&lt;&gt; View Projects</a>
+      </div>
+
+      <!-- Social media links with icons -->
+      <div class="social-links">
+        <a href="https://www.instagram.com/iamnihal_1/" target="_blank">
+          <img src="https://img.icons8.com/ios/50/FFFFFF/instagram-new--v1.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/fomo-tih" target="_blank">
+          <img src="https://img.icons8.com/fluency-systems-filled/50/FFFFFF/github.png" alt="GitHub">
+        </a>
+      </div>
+    </div>
+
+    <!-- Right column: profile picture -->
+    <div class="about-image">
+      <img src="images/about me pic.jpg" alt="Profile Picture">
+    </div>
+  </section>
+
+
+  <!-- ===================== STATS SECTION ===================== -->
+  <section class="about-stats-row">
+    <!-- Quick highlights (clickable links to portfolio showcase tabs) -->
+    <a href="#portfolio-showcase" data-target="projects" class="stat">
+      <h2>3</h2>
+      <p>Projects Completed</p>
+    </a>
+    <a href="#portfolio-showcase" data-target="certificates" class="stat">
+      <h2>6</h2>
+      <p>Certificates</p>
+    </a>
+    <a href="#portfolio-showcase" data-target="techstack" class="stat">
+      <h2>12</h2>
+      <p>Tech Stack</p>
+    </a>
+  </section>
+
+
+  <!-- ===================== PORTFOLIO SHOWCASE ===================== -->
+  <section class="portfolio-showcase" id="portfolio-showcase">
+    <!-- Title and intro -->
+    <h2>Portfolio Showcase</h2>
+    <p class="portfolio-subtitle">
+      Explore my journey through projects, certifications, and technical expertise.  
+      Each section represents a milestone in my continuous learning path.
+    </p>
+
+    <!-- Tabs for filtering content -->
+    <div class="portfolio-tabs">
+      <button class="tab active" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="certificates">Certificates</button>
+      <button class="tab" data-tab="techstack">Tech Stack</button>
+    </div>
+
+    <!-- Content for each tab -->
+    <div class="portfolio-content">
+
+      <!-- ===== Projects Tab ===== -->
+      <div class="tab-content active" id="projects">
+        <div class="portfolio-grid">
+          <!-- Example project card -->
+          <div class="portfolio-card">
+            <img src="project1.png" alt="Capstone Project">
+            <h3>Website & Application</h3>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <div class="card-links">
+              <a href="#" target="_blank" class="live-demo">Live Demo ↗</a>
+              <a href="#" class="details">Details →</a>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="project2.png" alt="Python">
+            <h3>Python</h3>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <div class="card-links">
+              <a href="#" target="_blank" class="live-demo">Live Demo ↗</a>
+              <a href="#" class="details">Details →</a>
+            </div>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="project3.png" alt="C++">
+            <h3>C++</h3>
+            <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <div class="card-links">
+              <a href="#" target="_blank" class="live-demo">Live Demo ↗</a>
+              <a href="#" class="details">Details →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Certificates Tab ===== -->
+      <div class="tab-content" id="certificates">
+        <div class="portfolio-grid">
+          <!-- Example certificate card -->
+          <div class="portfolio-card">
+            <img src="images/MFFU Certificate.png" alt="Cybersecurity Certificate">
+            <h3>MFFU Certificate</h3>
+            <p>Certification in core cybersecurity concepts and practices.</p>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="images/Harnihal Thandi_certificate (2).png" alt="Python Certificate">
+            <h3>Equity Edge Certificate</h3>
+            <p>Completed a certification course in Python programming.</p>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="images/Harnihal Thandi_certificate (3).png" alt="Python Certificate">
+            <h3>ACG March Certificate</h3>
+            <p>Completed a certification course in Python programming.</p>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="images/Harnihal Thandi_certificate (5).png" alt="Python Certificate">
+            <h3>ACG June Certificate</h3>
+            <p>Completed a certification course in Python programming.</p>
+          </div>
+
+          <div class="portfolio-card">
+            <img src="images/Equity Edge Certificate.png" alt="Python Certificate">
+            <h3>ACG July Certificate</h3>
+            <p>Completed a certification course in Python programming.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== Tech Stack Tab ===== -->
+      <div class="tab-content" id="techstack">
+        <div class="techstack-grid">
+          <!-- Each tech card contains icon + name -->
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/html-5--v1.png" alt="HTML"><p>HTML</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/css3.png" alt="CSS"><p>CSS</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/javascript--v1.png" alt="JavaScript"><p>JavaScript</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/kotlin.png" alt="Kotlin"><p>Kotlin</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/react-native.png" alt="React"><p>ReactJS</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/fluency/48/node-js.png" alt="Node.JS"><p>Node.JS</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/fluency/48/flutter.png" alt="Flutter"><p>Flutter</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/android-studio--v2.png" alt="Android Studio"><p>Android Studio</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/firebase.png" alt="Firebase"><p>Firebase</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/linux--v1.png" alt="Linux"><p>Linux</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/python--v1.png" alt="Python"><p>Python</p></div>
+          <div class="tech-card"><img src="https://img.icons8.com/color/48/mysql-logo.png" alt="MySQL"><p>MySQL</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    2025 - fomo.tih | GenAI Acknowledgement
+  </footer>
+
+  <!-- ===================== JAVASCRIPT ===================== -->
+  <script src="navScript.js"></script>
+</body>
+</html>
